@@ -12,7 +12,8 @@
    --yellow: hsl(51, 100%, 49%);
    --dark-cyan: hsl(167, 40%, 24%);
    --text-blue: hsl(198, 62%, 26%);
-   --footer-cyan: hsl(168, 34%, 41%);
+   /* --footer-cyan: hsl(168, 34%, 41%); */
+   --footer-cyan: hsl(168, 53%, 73%);
 
    --dark-blue: hsl(212, 27%, 19%);
    --very-dark-grayish-blue: hsl(213, 9%, 39%);
@@ -26,17 +27,22 @@
    --pink-cup: url("/images/mobile/image-stand-out.jpg");
    --cherry-img: url("/images/mobile/image-graphic-design.jpg");
    --photography-img: url("/images/mobile/image-photography.jpg");
+   --milk-img: url("/images/mobile/image-gallery-milkbottles.jpg");
+   --orange-img: url("/images/mobile/image-gallery-orange.jpg");
+   --cone-img: url("/images/mobile/image-gallery-cone.jpg");
+   --sugar-img: url("/images/mobile/image-gallery-sugar-cubes.jpg");
 }
 
 /* MOBILE FIRST */
 body {
    font-family: "Barlow", sans-serif;
    font-size: 18px;
+   color: #19536b;
 }
 
 /* Reusable Styles */
 h1 {
-   font-family: "Fraunces", sans-serif;
+   font-family: "Fraunces", serif;
    text-transform: uppercase;
    margin-bottom: 1em;
    font-size: 2.5rem;
@@ -45,7 +51,7 @@ h1 {
 }
 h2 {
    font-size: 2rem;
-   font-family: "Fraunces", sans-serif;
+   font-family: "Fraunces", serif;
    margin-bottom: .8em;
 }
 
@@ -55,22 +61,41 @@ p {
 }
 a {
    text-decoration: none;
-   color: black;
+   color: inherit;
 } 
 
+a:visited {
+   color: unset;
+}
+
 .wrapper {
-   border: 1px solid grey;
-   padding: 1rem 0;
+   /* border: 1px solid grey; */
+   margin: 10rem;
+   /* padding: 1rem 0; */
    width: 90%;
    max-width: 320px;
    margin: 0 auto;
    text-align: center;
 }
 
+/* content padding  */
+.pd {
+   padding: 4rem 0;
+}
+
+.img-basic {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
 .learn-more {
    margin-bottom: 2em;
 }
 
+.logo {
+   font-family: "Poppins", sans-serif;
+   /* letter-spacing: 0.1em; */
+}
 .text-grey {
    color: var(--dark-grayish-blue);
 }
@@ -93,10 +118,19 @@ a {
    background-repeat: no-repeat;
 }
 
+.testimony-title {
+   text-transform: uppercase;
+   font-size: 18px;
+   color: var(--grayish-blue);
+   margin-bottom:  3em;
+   letter-spacing: 2px;
+}
+
 /* header */
  header {
     background:transparent;
-    /* border: 2px solid grey; */
+    /* border: 2px solid gold; */
+    margin-bottom: 2rem;
     /* position: absolute; */
     /* width: 100%; */
     
@@ -105,7 +139,7 @@ a {
  }
 
  header .logo {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
  }
    header div {
@@ -139,20 +173,20 @@ a {
 
 /* info sections */
 .info {
-   padding: 2rem 0;
+   /* padding: 2rem 0; */
 }
 
 /* pink cup img */
 .cup {
    height: 250px;
    background-image: var(--pink-cup);
-   background-size: cover;
+   /* background-size: cover;
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center; */
 }
 
 .graphic-design {
-   border: 2px solid lime;
+   /* border: 2px solid lime; */
    height: 600px;
    background-image: var(--cherry-img);
    background-size: cover;
@@ -165,4 +199,100 @@ a {
 .photography {
    height: 600px;
    background-image: var(--photography-img);
+}
+
+/* testimony section */
+.testimony {
+   /* background: lightskyblue; */
+   margin-bottom: 3em;
+   /* border: 2px solid purple; */
+}
+
+.testimony:last-child {
+   margin-bottom: 0;
+}
+
+.testimony img {
+   height: 75px;
+   border-radius: 50%;
+   margin: 0;
+}
+
+.quote {
+   color: var(--dark-blue);
+   margin: 1.5em 0;
+}
+
+.author {
+   font-family: "Fraunces", serif;
+   font-weight: 900;
+   margin-bottom: .3em;
+}
+
+.title {
+   font-size: 16px;
+   color: var(--grayish-blue);
+   margin: 0;
+}
+
+
+/* Image block */
+.images {
+   height: 400px;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   /* border: 2px solid orange; */
+}
+
+.milk {
+   height: 50%;
+   width: 50%;
+   background-image: var(--milk-img);
+   
+}
+.cone {
+   height: 50%;
+   width: 50%;
+   background-image: var(--cone-img);
+   
+}
+.orange {
+   height: 50%;
+   width: 50%;
+   background-image: var(--orange-img);   
+   
+}
+.sugar {
+   height: 50%;
+   width: 50%;
+   background-image: var(--sugar-img);
+   
+}
+
+/* Footer */
+footer {
+   background-color: var(--footer-cyan);
+
+}
+
+.footer-text {
+   margin:0;
+   font-size: 32px;
+   font-weight: 700;
+}
+
+.footer-nav {
+   width: 280px;
+   margin: 2em auto 4em auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.social-icons {
+   /* border: 1px solid lime; */
+   width: 150px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
 }
